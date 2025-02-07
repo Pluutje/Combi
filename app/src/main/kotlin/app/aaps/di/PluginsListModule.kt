@@ -1,6 +1,7 @@
 package app.aaps.di
 
 import app.aaps.core.interfaces.plugin.PluginBase
+import app.aaps.plugins.aps.DynSMB.OpenAPSDynSMBPlugin
 import app.aaps.plugins.aps.autotune.AutotunePlugin
 import app.aaps.plugins.aps.loop.LoopPlugin
 import app.aaps.plugins.aps.openAPSAIMI.OpenAPSAIMIPlugin
@@ -151,11 +152,11 @@ abstract class PluginsListModule {
     @IntKey(90)
     abstract fun bindDanaRPlugin(plugin: DanaRPlugin): PluginBase
 
-    @Binds
-    @PumpDriver
-    @IntoMap
-    @IntKey(100)
-    abstract fun bindDanaRKoreanPlugin(plugin: DanaRKoreanPlugin): PluginBase
+ //   @Binds
+ //   @PumpDriver
+ //   @IntoMap
+ //   @IntKey(100)
+ //   abstract fun bindDanaRKoreanPlugin(plugin: DanaRKoreanPlugin): PluginBase
 
     @Binds
     @PumpDriver
@@ -181,11 +182,11 @@ abstract class PluginsListModule {
     @IntKey(140)
     abstract fun bindComboV2Plugin(plugin: ComboV2Plugin): PluginBase
 
-    @Binds
-    @PumpDriver
-    @IntoMap
-    @IntKey(145)
-    abstract fun bindOmnipodErosPumpPlugin(plugin: OmnipodErosPumpPlugin): PluginBase
+//    @Binds
+//    @PumpDriver
+//    @IntoMap
+//    @IntKey(145)
+//    abstract fun bindOmnipodErosPumpPlugin(plugin: OmnipodErosPumpPlugin): PluginBase
 
     @Binds
     @PumpDriver
@@ -193,11 +194,11 @@ abstract class PluginsListModule {
     @IntKey(148)
     abstract fun bindOmnipodDashPumpPlugin(plugin: OmnipodDashPumpPlugin): PluginBase
 
-    @Binds
-    @PumpDriver
-    @IntoMap
-    @IntKey(150)
-    abstract fun bindMedtronicPumpPlugin(plugin: MedtronicPumpPlugin): PluginBase
+//    @Binds
+//    @PumpDriver
+//    @IntoMap
+//    @IntKey(150)
+//    abstract fun bindMedtronicPumpPlugin(plugin: MedtronicPumpPlugin): PluginBase
 
     @Binds
     @PumpDriver
@@ -246,6 +247,12 @@ abstract class PluginsListModule {
     @IntoMap
     @IntKey(220)
     abstract fun bindOpenAPSSMBPlugin(plugin: OpenAPSSMBPlugin): PluginBase
+
+    @Binds
+    @AllConfigs
+    @IntoMap
+    @IntKey(222)
+    abstract fun bindOpenAPSDynSMBPlugin(plugin: OpenAPSDynSMBPlugin): PluginBase
 
     @Binds
     @AllConfigs

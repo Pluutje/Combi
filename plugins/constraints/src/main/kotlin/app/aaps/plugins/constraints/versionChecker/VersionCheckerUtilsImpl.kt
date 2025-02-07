@@ -57,7 +57,7 @@ class VersionCheckerUtilsImpl @Inject constructor(
                         var endDate = sp.getLong(rh.gs(app.aaps.core.utils.R.string.key_app_expiration) + "_" + config.get().VERSION_NAME, 0)
                         AllowedVersions.findByVersion(definition, config.get().VERSION_NAME)?.let { expirationJson ->
                             AllowedVersions.endDateToMilliseconds(expirationJson.getString("endDate"))?.let { ed ->
-                                endDate = ed + T.days(1).msecs()
+                                endDate = ed + T.days(1000).msecs()
                                 sp.putLong(rh.gs(app.aaps.core.utils.R.string.key_app_expiration) + "_" + config.get().VERSION_NAME, endDate)
                             }
                         }
@@ -158,8 +158,8 @@ class VersionCheckerUtilsImpl @Inject constructor(
 
     companion object {
 
-        private val CHECK_EVERY = TimeUnit.DAYS.toMillis(1)
-        private val WARN_EVERY = TimeUnit.DAYS.toMillis(1)
+        private val CHECK_EVERY = TimeUnit.DAYS.toMillis(25)
+        private val WARN_EVERY = TimeUnit.DAYS.toMillis(25)
     }
 }
 

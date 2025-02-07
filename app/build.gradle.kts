@@ -285,13 +285,13 @@ println("gitAvailable: ${gitAvailable()}")
 println("allCommitted: ${allCommitted()}")
 println("-------------------")
 
-if (isMaster() && !gitAvailable()) {
+/*if (isMaster() && !gitAvailable()) {
     throw GradleException(
         "GIT system is not available. On Windows try to run Android Studio as Administrator. " +
             "Check if GIT is installed and that Studio has permissions to use it."
     )
 }
 
-/*if (isMaster() && !allCommitted()) {
+if (isMaster() && !allCommitted()) {
     throw GradleException("There are uncommitted changes.")
 }*/

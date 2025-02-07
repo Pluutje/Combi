@@ -39,9 +39,9 @@ class TreatmentActivity : ViewSelectorActivity() {
         override fun getColumnCount(arg0: Int): Int = 3
         override fun getRowCount(): Int = 1
 
-        val incrementInsulin1 = (preferences.get(DoubleKey.OverviewInsulinButtonIncrement1) * 10).roundToInt() / 10.0
-        val incrementInsulin2 = (preferences.get(DoubleKey.OverviewInsulinButtonIncrement2) * 10).roundToInt() / 10.0
-        val stepValuesInsulin = listOf(0.1, incrementInsulin1, incrementInsulin2)
+        val incrementInsulin1 = (preferences.get(DoubleKey.OverviewInsulinButtonIncrement1) * 20).roundToInt() / 20.0
+        val incrementInsulin2 = (preferences.get(DoubleKey.OverviewInsulinButtonIncrement2) * 20).roundToInt() / 20.0
+        val stepValuesInsulin = listOf(0.05, incrementInsulin1, incrementInsulin2)
         val incrementCarbs1 = preferences.get(IntKey.OverviewCarbsButtonIncrement1).toDouble()
         val incrementCarbs2 = preferences.get(IntKey.OverviewCarbsButtonIncrement2).toDouble()
         val stepValuesCarbs = listOf(1.0, incrementCarbs1, incrementCarbs2)
@@ -52,7 +52,7 @@ class TreatmentActivity : ViewSelectorActivity() {
                 val view = viewAdapter.root
                 var initValue = stringToDouble(editInsulin?.editText?.text.toString(), 0.0)
                 val maxBolus = sp.getDouble(getString(R.string.key_treatments_safety_max_bolus), 3.0)
-                editInsulin = PlusMinusEditText(viewAdapter, initValue, 0.0, maxBolus, stepValuesInsulin, DecimalFormat("#0.0"), false, getString(R.string.action_insulin))
+                editInsulin = PlusMinusEditText(viewAdapter, initValue, 0.0, maxBolus, stepValuesInsulin, DecimalFormat("#0.00"), false, getString(R.string.action_insulin))
                 container.addView(view)
                 view.requestFocus()
                 view
@@ -62,8 +62,8 @@ class TreatmentActivity : ViewSelectorActivity() {
                 val viewAdapter = EditPlusMinusViewAdapter.getViewAdapter(sp, applicationContext, container, true)
                 val view = viewAdapter.root
                 val maxCarbs = sp.getInt(getString(R.string.key_treatments_safety_max_carbs), 48).toDouble()
-                var initValue = stringToDouble(editCarbs?.editText?.text.toString(), 0.0)
-                editCarbs = PlusMinusEditText(viewAdapter, initValue, 0.0, maxCarbs, stepValuesCarbs, DecimalFormat("0"), false, getString(R.string.action_carbs))
+                val initValue = stringToDouble(editCarbs?.editText?.text.toString(), 0.0)
+                editCarbs = PlusMinusEditText(viewAdapter, initValue, -maxCarbs, maxCarbs, stepValuesCarbs, DecimalFormat("0"), false, getString(R.string.action_carbs))
                 container.addView(view)
                 view
             }

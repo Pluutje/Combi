@@ -72,7 +72,16 @@ enum class DoubleKey(
     OApsAIMIDinnerPrebolus("key_prebolus_dinner_mode",2.5,0.1, 10.0),
     OApsAIMIDinnerPrebolus2("key_prebolus2_dinner_mode",2.0,0.1, 10.0),
     OApsAIMISnackPrebolus("key_prebolus_snack_mode",1.0,0.1, 10.0),
-    OApsAIMIHighCarbPrebolus("key_prebolus_highcarb_mode",5.0,0.1, 10.0)
+    OApsAIMIHighCarbPrebolus("key_prebolus_highcarb_mode",5.0,0.1, 10.0),
+
+    //  Eigen
+
+    persistent_Dagdrempel("persistent_Dagdrempel", 8.5,7.0,12.0),
+    persistent_Nachtdrempel("persistent_Nachtdrempel",7.0,6.0,10.0),
+    persistent_grens("persistent_grens",0.5,0.1, 1.0),
+    new_uam_boostDrempel("new_uam_boostDrempel", 0.9,0.8,1.2),
+    dag_resistentie_target("dag_resistentie_target", 5.2,4.0,8.0),
+    nacht_resistentie_target("nacht_resistentie_target", 5.2,4.0,8.0),
 
 
 }
