@@ -51,4 +51,12 @@ enum class StringKey(
     TidepoolUsername("tidepool_username", ""),
     TidepoolPassword("tidepool_password", "", isPassword = true),
     TidepoolTestLogin(key = "tidepool_test_login", ""),
+
+    // eigen
+    OchtendStart(key = "OchtendStart", "06:30"),
+    OchtendStartWeekend(key = "OchtendStartWeekend", "08:00"),
+    MiddagStart(key = "MiddagStart", "11:45"),
+    AvondStart(key = "AvondStart", "17:30"),
+    NachtStart(key = "NachtStart", "23:30"),
+    WeekendDagen(key = "WeekendDagen", "za,zo"),
 }

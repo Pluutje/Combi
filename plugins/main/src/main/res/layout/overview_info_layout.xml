@@ -282,6 +282,8 @@
             tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
+            android:textColor="#909191"
+            android:textSize="16sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 
@@ -300,22 +302,38 @@
         <ImageView
             android:id="@+id/carbs_icon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/anim_carbs"
             android:contentDescription="@string/cob" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="0dp"
+            android:paddingBottom="-1dp"
+            android:rotation="0"
+            android:rotationX="0"
+            android:text="24u -TIR - 5d "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#C6CFC6"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/cob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            tools:text="n/a"
+            android:paddingTop="1dp"
+            android:paddingBottom="0dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#EB2A972F"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            tools:text="tir" />
     </LinearLayout>
 
     <LinearLayout
@@ -346,7 +364,9 @@
             android:paddingBottom="3dp"
             tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#1ea3e5"
             android:textStyle="bold"
+            android:textSize="16sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 
@@ -375,55 +395,62 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/as_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="69dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="-6dp"
+        android:focusable="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/extended_layout"
         app:layout_constraintTop_toTopOf="@+id/iob_layout"
-        tools:ignore="UseCompoundDrawables"
-        android:focusable="true">
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/sensitivity_icon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_swap_vert_black_48dp_green"
-            android:contentDescription="@string/a11y_autosens_label" />
+            android:contentDescription="@string/a11y_autosens_label"
+            app:srcCompat="@drawable/ic_swap_vert_black_48dp_green" />
 
         <TextView
             android:id="@+id/sensitivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            tools:text="n/a"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="100%"
+            android:textColor="#28A9E9"
             android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/variable_sensitivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-9dp"
-            android:gravity="center_horizontal"
-            android:paddingBottom="3dp"
-            tools:text="n/a"
+            android:layout_marginTop="-5dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="0dp"
+            android:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#1ea3e5"
             android:textStyle="bold"
             android:visibility="visible"
+            android:textSize="16sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 

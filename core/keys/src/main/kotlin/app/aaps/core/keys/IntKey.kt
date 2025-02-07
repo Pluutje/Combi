@@ -86,5 +86,33 @@ enum class IntKey(
     OApsAIMISleepinterval("key_oaps_aimi_sleep_interval", 3, 1, 20, defaultedBySM = true),
     OApsAIMIHighCarbAdjISFFact("key_oaps_aimi_highcarbAdjFact",50,1,500),
     OApsAIMISnackAdjISFFact("key_oaps_aimi_snackAdjFact",50,1,500),
-    OApsAIMIlogsize("key_oaps_aimi_logsize",25,1,50)
+    OApsAIMIlogsize("key_oaps_aimi_logsize",25,1,50),
+
+    //  Eigen
+    bolus_boost_sterkte("bolus_boost_sterkte",0,0, 20),
+    bolus_boost_deltaT("bolus_boost_deltaT",0,-15, 15),
+    BoostPerc("highCarbPerc",225,50, 500),
+    maxBoostPerc("maxBoostPerc",400,100, 750),
+    new_uam_boostPerc("new_uam_boostPerc", 200,100,350),
+    hypoPerc("hypoPerc", 50,10,100),
+    BgIOBPerc("BgIOBPerc", 100,100,200),
+
+
+    min_resistentiePerc("min_resistentiePerc", 80,10,100),
+    max_resistentiePerc("max_resistentiePerc", 120,100,200),
+    dag_resistentiePerc("dag_resistentiePerc", 100,10,200),
+    nacht_resistentiePerc("nacht_resistentiePerc", 100,10,200),
+    Dagen_resistentie("Dagen_resistentie", 3,1,7),
+    Uren_resistentie("Uren_resistentie", 2,1,5),
+    res_basalPerc("res_basalPerc", 50,0,100),
+    SMB_versterkerPerc("SMB_versterkerPerc", 100,100,250),
+    SMB_versterkerWachttijd("SMB_versterkerWachttijd", 7,1,30),
+    stap_activiteteitPerc("stap_activiteteitPerc", 50,10,100),
+    stap_5minuten("stap_5minuten", 200,100,300),
+    stap_retentie("stap_retentie", 6,2,12),
+    bg_PercOchtend("bg_PercOchtend",100,50, 250),
+    bg_PercMiddag("bg_PercMiddag",100,50, 250),
+    bg_PercAvond("bg_PercAvond",100,50, 250),
+    bg_PercNacht("bg_PercNacht",100,50, 250),
+
 }

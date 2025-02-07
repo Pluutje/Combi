@@ -368,4 +368,136 @@
     <string name="openapsama_iob_threshold_percent">maxIOB threshold percent for SMB\n(iob_threshold_percent)</string>
     <string name="Enable_xdripOM_title">Enable xdrip bg each one minute</string>
 
+    <!--    Eigen -->
+    <string name="MaxBoostPerc_summary">Het maximum overall (product van alle percentages) insuline percentage zal beneden deze waarde blijven</string>
+    <string name="MaxBoostPerc_title">Maximum overall insuline percentage</string>
+
+    <string name="bolus_boost_sterkte_summary">Percentage correctie t.o.v. het ingegeven boost-percentage</string>
+    <string name="bolus_boost_sterkte_title">+/- percentage tbv sterkte</string>
+    <string name="bolus_boost_deltaT_summary">Tijd correctie + of - in minuten waarop het ingestelde percentage wordt bereikt</string>
+    <string name="bolus_boost_deltaT_title">∆T t.o.v. middelpunt</string>
+
+
+    <string name="bg_OchtendPerc_summary">Kracht van de dynamische ISF op basis van de Bg gedurende de ochtend</string>
+    <string name="bg_OchtendPerc_title">Ochtend. Dynamische Bg_isf sterkte</string>
+    <string name="bg_MiddagPerc_summary">Kracht van de dynamische ISF op basis van de Bg gedurende de middag</string>
+    <string name="bg_MiddagPerc_title">Middag. Dynamische Bg_isf sterkte</string>
+    <string name="bg_AvondPerc_summary">Kracht van de dynamische ISF op basis van de Bg gedurende de avond</string>
+    <string name="bg_AvondPerc_title">Avond. Dynamische Bg_isf sterkte</string>
+    <string name="bg_NachtPerc_summary">Kracht van de dynamische ISF op basis van de Bg gedurende de nacht</string>
+    <string name="bg_NachtPerc_title">Nacht. Dynamische Bg_isf sterkte</string>
+    <string name="persistent_Dagdrempel_summary">Drempel bg-waarde waarboven de extra correctie overdag wordt toegepast</string>
+    <string name="persistent_Dagdrempel_title">Overdag drempel persistent hoog</string>
+    <string name="persistent_Nachtdrempel_summary">Drempel bg-waarde waarboven de extra correctie snachts wordt toegepast</string>
+    <string name="persistent_Nachtdrempel_title">Nacht drempel persistent hoog</string>
+    <string name="persistent_grens_summary">Range in mmol waarbinnen de delta moet blijven voor de persistent hoge bg correctie</string>
+    <string name="persistent_grens_title">Range persistent hoog</string>
+    <string name="hypoPerc_summary">Het Bg Percentage wordt gecorrigeerd met dit percentage als de UAM stijging het gevolg is van een hypo correctie. (50 % is een goede startwaarde)</string>
+    <string name="hypoPerc_title">Hypo correctie insuline percentage</string>
+    <string name="BgIOBPerc_summary">Het Bg Percentage wordt verhoogd bij hoge Bg en Lage IOB.</string>
+    <string name="BgIOBPerc_title">Bg-IOB verhouding correctie insuline percentage</string>
+
+
+    <string name="word_handleiding" translatable="false">https://docs.google.com/document/d/10eMqlDauQ3wXd2hGQZeS8TalywemnLy2/edit</string>
+    <string name="Info_doc1">!! Klik om te openen !!\n Inleiding \n Dit document geeft de basisuitleg over het AUTO-SMB algortime</string>
+    <string name="Info_doc2">!! Klik om te openen !!\n Document2 info</string>
+    <string name="Info_doc3">!! Klik om te openen !!\n Document3 info</string>
+    <string name="www_doc1" translatable="false">https://docs.google.com/document/d/10eMqlDauQ3wXd2hGQZeS8TalywemnLy2/edit</string>
+    <string name="www_doc2" translatable="false">https://docs.google.com/document/d/11iVBrEsWRzGgb2BLANFEtZkZVln3K6tE/edit</string>
+    <string name="www_doc3" translatable="false">https://docs.google.com/document/d/11jK2-0Cu5xAN38g4NLKHnWjwySfCbkKD/edit</string>
+
+
+
+    <string name="Info_Bg">1. Dynamische Bg: \n ● correctie sterkte instelbaar tussen 75% en 125%. \n 2. Persistent hoge Bg: \n ● Drempelwaarde waaronder nooit een persitent hoge Bg wordt gedetecteerd \n ● Range (+/- in mmol/l) waarbinnen de Bg als stabiel wordt beschouwd.\n 3. Hypo correctie uitgevoerd als bg onder target komt \n\n !! Klik om te openen !!\n</string>
+    <string name="a_bg_doc" translatable="false">https://docs.google.com/document/d/12nn-5wnnbqTLOE00fwe8mANcpMUW8T4H/edit</string>
+    <string name="Info_activiteit">● Activiteits instellingen gebasserd op stappen!:\n 1. Stappenteller aan/uit schakelen.\n 2. Insuline percentage bij gedetecteerde activiteit.\n \n !! Klik om te openen !!\n</string>
+    <string name="b_stappen_doc" translatable="false">https://docs.google.com/document/d/12gcpIZ9B-TC0vAnB9XH_55IpHAuePFSV/edit</string>
+    <string name="Info_UAMBoost">● UAM Boost instellingen!:\n 1. ∆15 groter dan drempelwaarde geeft boostpercentage op de insuline.\n 2. Het basis boost percentage wordt toegepast en gecorrigeerd voor de Bg en de ∆15.\n \n !! Klik om te openen !!\n</string>
+    <string name="c_UAMBoost_doc" translatable="false">https://docs.google.com/document/d/12pNHAKEyE1A4J356T2x8TVJlPlbqsTuR/edit</string>
+    <string name="Info_SMBversterker">● SMB versterker instellingen!:\n 1. Percentage van de versterking (100% - 250%).\n 2. Wachttijd voordat de versterker weer inwerking treedt na een vorige activering.\n \n !! Klik om te openen !!\n</string>
+    <string name="d_SMBversterker_doc" translatable="false">https://docs.google.com/document/d/13C-p1m3HoyEUYEsGxN8IoX7kAmVPPMfP/edit</string>
+    <string name="Info_basaal">● Basaal instellingen!:\n 1. Percentage basaal tov TDD.\n 2. Aanvullende gevoeligheids detectie op basis van tijdstip op de dag.\n \n !! Klik om te openen !!\n</string>
+    <string name="e_basaal_doc" translatable="false">https://docs.google.com/document/d/131_ybmLgJYdDWpxgGjtA7ztaPLEZ_feT/edit</string>
+    <string name="Info_resistentie">● Extra resistentie instellingen!:\n 1. Aanvullende gevoeligheids detectie op basis van tijdstip op de dag.\n \n !! Klik om te openen !!\n</string>
+    <string name="e_resistentie_doc" translatable="false">https://docs.google.com/document/d/131_ybmLgJYdDWpxgGjtA7ztaPLEZ_feT/edit</string>
+    <string name="Info_bolus_boost">Info tbv bolus-boost aanpassingen!\n 1. Het ingestelde Boost-% wordt dynamisch t.o.v. loopttijd gecorrigeerd tussen +/- de ingestelde sterkte in procenten.\n 2. Looptijd correctie (-15 tot +15 minuten), waar percentage gelijk aan ingestelde %.\n \n !! Klik om te openen !!\n</string>
+    <string name="f_bolus_boost_doc" translatable="false">https://docs.google.com/document/d/130Bx3629sTeI5E5-aaTaiAdAuJJID1xg/edit</string>
+    <string name="Info_note_boost">Info tbv Automatisering Note-boost aanpassingen!\n 1. Via automatisering en gebruikers actie wordt een mode gekozen. \n 2. Laag, Middel, Hoog koolhydraat of Stop. Het ingestelde Boost-% wordt tijdens de loopttijd toegepast.\n 3. Tevens wordt aan de start een extra SMB gegeven.\n \n !! Klik om te openen !!\n</string>
+    <string name="g_note_boost_doc" translatable="false">https://docs.google.com/document/d/13lPl9WChpcA5mbfXRdtsC0fT18HHaNL1/edit</string>
+    <string name="Info_algemeen">Algemene instellingen!\n 1. Tijdstip warop de dagstart en eindigt. \n 2. .......\n 3. ..........\n \n !! Klik om te openen !!\n</string>
+    <string name="h_algemeen_doc" translatable="false">https://docs.google.com/document/d/13lPl9WChpcA5mbfXRdtsC0fT18HHaNL1/edit</string>
+
+    <string name="new_UAMBoostPerc_summary">Het basis UAM Percentage wordt gecorrigeerd t.o.v. de ∆15 en de Bg. Een goede start is rond de 200%</string>
+    <string name="new_UAMBoostPerc_title">basis UAM insuline boost percentage</string>
+
+    <string name="new_UAMBoostDrempel_summary">Instelbaar tussen 0,8 en 1,2 mmol/l. Bij lagere drempel zal de boost eerder worden ingeschakeld</string>
+    <string name="new_UAMBoostDrempel_title">∆15 drempel</string>
+
+    <string name="ISF_Perc_summary">Kracht van de dynamische ISF. Groter dan 100% geeft meer insuline en dus lager ISF.</string>
+    <string name="ISF_Perc_title">Dynamisch ISF sterkte (%)</string>
+    <string name="standaard_TDD_summary">Het gemiddelde dagelijkse aantal TDD eenheden. Wordt gebruikt als realtime data ontbreekt (10 tot 75).</string>
+    <string name="standaard_TDD_title">dagelijks gemiddeld TDD</string>
+    <string name="basaal_TDDPerc_summary">Het deel van de TDD wat wordt gebruikt als basaal (25% tot 75%).</string>
+    <string name="basaal_TDDPerc_title">Basaal perc tov TDD (%)</string>
+    <string name="TDD_weegfactor_summary">Verhouding 6-12-24 uurs TDD bij gem Basaal berekening. Factor 1: 3*6h 2*12h 1*24h. Factor 2: 2*6h 2*12h 2*24h. Factor 3: 1*6h 2*12h 3*24h.</string>
+    <string name="TDD_weegfactor_title">Weegfactor TDD 6-12-24 uur</string>
+    <string name="min_basaal_summary">Minimum waarde die het berekende dynamische basaal kan aannemen. (0,1 tot 0,5).</string>
+    <string name="min_basaal_title">Minimum dynamisch basaal</string>
+    <string name="max_basaal_summary">Maximum waarde die het berekende dynamische basaal kan aannemen. (0,5 tot 1,5).</string>
+    <string name="max_basaal_title">Maximum dynamisch basaal</string>
+    <string name="Titel_resistentie">Gebruik resistentie functie</string>
+    <string name="min_resistentiePerc_summary">De minimum waarde van de resistentie (10% - 100%).</string>
+    <string name="min_resistentiePerc_title">Minimum resistentie percentage (%)</string>
+    <string name="max_resistentiePerc_summary">De maximum waarde van de resistentie (100% - 200%).</string>
+    <string name="max_resistentiePerc_title">Maximum resistentie percentage (%)</string>
+    <string name="dag_resistentiePerc_summary">Het effect van de resistentie sterkte kan worden gecorrigeerd tussen 10% en 200%.</string>
+    <string name="dag_resistentiePerc_title">Resistentie sterkte overdag (%)</string>
+    <string name="nacht_resistentiePerc_summary">Het effect van de resistentie sterkte kan worden gecorrigeerd tussen 10% en 200%.</string>
+    <string name="nacht_resistentiePerc_title">Resistentie sterkte snachts (%)</string>
+    <string name="dag_resistentie_target_summary">Bg target overdag ten opzichte waarvan de afwijking tbv de resistentie wordt berekend</string>
+    <string name="dag_resistentie_target_title">Resistentie target overdag</string>
+    <string name="nacht_resistentie_target_summary">Bg target snachts ten opzichte waarvan de afwijking tbv de resistentie wordt berekend</string>
+    <string name="nacht_resistentie_target_title">Resistentie target snachts</string>
+    <string name="Dagen_resistentie_summary">Het aantal dagen dat de resistentie correctie terug kijkt om in de berekening (min 1, max 7).</string>
+    <string name="Dagen_resistentie_title">Aantal dagen</string>
+    <string name="Uren_resistentie_summary">Het aantal uren per dag waarover de bg wordt gemiddeld (min 1, max 5).</string>
+    <string name="Uren_resistentie_title">Aantal uur</string>
+    <string name="res_basalPerc_summary">Gedeelte van de resistentie correctie wat gebruikt wordt voor de basaal aanpassing (0% tot 100%).</string>
+    <string name="res_basalPerc_title">Basaal resistentie correctie (%)</string>
+
+
+    <string name="SMB_versterkerPerc_summary">Het percentage waarmee de SMB wordt versterkt als aan de voorwaarden is voldaan.</string>
+    <string name="SMB_versterkerPerc_title">SMB versterkings percentage (%)</string>
+    <string name="SMB_versterkerWachttijd_summary">Wachttijd na een activering voordat deze opnieuw wordt geactiveerd kan worden.</string>
+    <string name="SMB_versterkerWachttijd_title">Wachttijd tussen 2 activeringen</string>
+
+    <string name="stappenAanUit_summary">Bij activering boven de drempel wordt de insuline afgifte met het ingestelde percentage gecorrigeerd</string>
+    <string name="stappenAanUit_title">Stappen insuline-correctie</string>
+    <string name="stap_activiteteitPerc_summary">Insuline percentage bij overschrijding van de stappendrempel</string>
+    <string name="stap_activiteteitPerc_title">Insuline percentage</string>
+    <string name="stap_5minuten_summary">Stappen benodigd in 5 minuten om te activeren. De 30 en 60 minuten drempel wordt berekend t.o.v. deze waarde.</string>
+    <string name="stap_5minuten_title">Drempelwaarde 5 minuten</string>
+    <string name="stap_retentie_summary">Maximum aantal keren dat de stappen acitvatie na-ijlt.</string>
+    <string name="stap_retentie_title">Max aantal retenties</string>
+
+
+    <string name="WeekendDagen_summary">Dagen waarop het weekend algoritme actief is (opmaak vr,za,zo,ma,di,wo,do)</string>
+    <string name="WeekendDagen_title">Weekend dagen (bv vr,za,zo)</string>
+    <string name="OchtendStart_summary">Tijdstip waarop het algoritme overschakelt naar de ochtend instellingen (opmaak hh:mm)</string>
+    <string name="OchtendStart_title">Ochtendstart tijdstip door de week (bv 06:30)</string>
+    <string name="OchtendStartWeekend_summary">Tijdstip waarop het algoritme overschakelt naar de ochtend instellingen (opmaak hh:mm)</string>
+    <string name="OchtendStartWeekend_title">Ochtendstart tijdstip Weekend (bv 08:00)</string>
+    <string name="MiddagStart_summary">Tijdstip waarop het algoritme overschakelt naar de middag instellingen (opmaak hh:mm)</string>
+    <string name="MiddagStart_title">Middagstart tijdstip (bv 11:45)</string>
+    <string name="AvondStart_summary">Tijdstip waarop het algoritme overschakelt naar de avond instellingen (opmaak hh:mm)</string>
+    <string name="AvondStart_title">Avondstart tijdstip (bv 18:30)</string>
+    <string name="NachtStart_summary">Tijdstip waarop het algoritme overschakelt naar de nacht instellingen (opmaak hh:mm)</string>
+    <string name="NachtStart_title">Nachtstart tijdstip (bv 23:30)</string>
+
+    <string name="Info_origineel">● Originele instellingen van het openApsSMB algoritme:\n 1. ........\n 2. ..........</string>
+    <string name="DynSMB">DYNAMIC</string>
+    <string name="description_DynSmb">Aangepast OpenAPS SMB voor Dynamisch insuline afgifte</string>
+    <string name="DynBasaal">Dynamic</string>
+    <string name="description_DynBasaal">Aangepast OpenAPS voor dynamisch basaal en ISF</string>
+
 </resources>

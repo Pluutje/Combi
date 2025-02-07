@@ -77,6 +77,7 @@ import app.aaps.core.interfaces.rx.weardata.EventData
 import app.aaps.core.interfaces.sharedPreferences.SP
 import app.aaps.core.interfaces.source.DexcomBoyda
 import app.aaps.core.interfaces.source.XDripSource
+import app.aaps.core.interfaces.stats.TirCalculator
 import app.aaps.core.interfaces.ui.UiInteraction
 import app.aaps.core.interfaces.utils.DateUtil
 import app.aaps.core.interfaces.utils.DecimalFormatter
@@ -115,6 +116,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import kotlin.math.abs
 import kotlin.math.min
+import kotlin.math.roundToInt
 
 class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickListener {
 
@@ -155,6 +157,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @Inject lateinit var uiInteraction: UiInteraction
     @Inject lateinit var decimalFormatter: DecimalFormatter
     @Inject lateinit var commandQueue: CommandQueue
+    @Inject lateinit var tirCalculator: TirCalculator
 
     private val disposable = CompositeDisposable()
 
@@ -568,7 +571,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             _binding ?: return@runOnUiThread
             if (showAcceptButton && pump.isInitialized() && !pump.isSuspended() && (loop as PluginBase).isEnabled()) {
                 binding.buttonsLayout.acceptTempButton.visibility = View.VISIBLE
-                binding.buttonsLayout.acceptTempButton.text = "${rh.gs(R.string.set_basal_question)}\n${lastRun.constraintsProcessed?.resultAsString()}"
+                binding.buttonsLayout.acceptTempButton.text = "${rh.gs(R.string.set_basal_question)}\n${lastRun!!.constraintsProcessed?.resultAsString()}"
             } else {
                 binding.buttonsLayout.acceptTempButton.visibility = View.GONE
             }
@@ -958,6 +961,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             rh.gs(app.aaps.core.ui.R.string.basal) + ": " + rh.gs(app.aaps.core.ui.R.string.format_insulin_units, basalIob().basaliob)
 
     private fun updateIobCob() {
+        val TIR_24h_4_10 = (tirCalculator.averageTIR(tirCalculator.calculateXHour(24,70.0, 180.0))?.inRangePct()!!).roundToInt()
+        val TIR_5d_4_10 = (tirCalculator.averageTIR(tirCalculator.calculate(5,70.0, 180.0))?.inRangePct()!!).roundToInt()
         val iobText = iobText()
         val iobDialogText = iobDialogText()
         val displayText = iobCobCalculator.getCobInfo("Overview COB").displayText(rh, decimalFormatter)
@@ -984,6 +989,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     carbAnimation?.selectDrawable(0)
                 }
             }
+            cobText =  TIR_24h_4_10.toString() + " %" + " - " + TIR_5d_4_10.toString() + " %"
             binding.infoLayout.cob.text = cobText
         }
     }
@@ -1191,11 +1197,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             val autoSensHiddenRange = 0.0             //Hide Autosens value if equals 100%
             val autoSensMax = 100.0 + (preferences.get(DoubleKey.AutosensMax) - 1.0) * autoSensHiddenRange * 100.0
             val autoSensMin = 100.0 + (preferences.get(DoubleKey.AutosensMin) - 1.0) * autoSensHiddenRange * 100.0
-            lastAutosensRatio?.let {
-                if (it < autoSensMin || it > autoSensMax)
-                    overViewText.add(rh.gs(app.aaps.core.ui.R.string.autosens_short, it))
-                okDialogText.add(rh.gs(app.aaps.core.ui.R.string.autosens_long, it))
-            }
+    //        lastAutosensRatio?.let {
+    //            if (it < autoSensMin || it > autoSensMax)
+    //                overViewText.add(rh.gs(app.aaps.core.ui.R.string.autosens_short, it))
+    //            okDialogText.add(rh.gs(app.aaps.core.ui.R.string.autosens_long, it))
+    //        }
             overViewText.add(
                 String.format(
                     Locale.getDefault(), "%1$.1f→%2$.1f",
